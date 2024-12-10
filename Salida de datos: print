@@ -1,0 +1,81 @@
+Salida de datos: print
+Es una instrucción que nos permite mostrar correctamente el valor de una cadena (u otros valores/variables) por pantalla.
+
+"Visual .Net"
+'Java'
+'Pyhton'
+RESULTADO: 
+'Pyhton'
+
+print("Visual .Net")
+print('Java')
+print('Python')
+RESULTADO: 
+Visual .Net
+Java
+Python
+
+x = 18
+#Mostrar en pantalla: 2 formas
+print("La variable x vale", x)
+print(f"La variable x vale {x}")
+RESULTADO: 
+La variable x vale 18
+La variable x vale 18
+
+
+print('Hola','como','estas')
+RESULTADO: 
+Hola como estas
+
+print("Hola")
+print("Hola","Mundo")
+print("Hola","Mundo", sep="***")
+print("Hola","Mundo", end="*****")
+RESULTADO: 
+Hola
+Hola Mundo
+Hola***Mundo
+Hola Mundo*****
+
+Nombre = "Luis"
+edad = 30
+print(Nombre, "tiene", edad, "años de edad.")
+RESULTADO:
+Luis tiene 30 años de edad
+
+print("000","Hola", sep = '')
+RESULTADO:
+000Hola
+
+# usando operadores de formato
+print("%s tiene %d años de edad." %(Nombre, edad))
+# d, i   Entero
+# f      Punto flotante como m.ddddd
+# s      cadena o string
+RESULTADO:
+Luis tiene 30 años de edad.
+
+print("%s es un alumno de %s que saco de nota %d." %('Juan','UC',20))
+RESULTADO:
+Juan es un alumno de UC que saco de nota 20
+
+precio = 24
+item = "banano"
+print("El %s cuesta %d centavos"%(item,precio))
+print("El %+10s cuesta %5.2f centavos"%(item,precio))
+print("El %+10s cuesta %10.2f centavos"%(item,precio))
+RESUELTO:
+El banano cuesta 24 centavos
+El     banano cuesta 24.00 centavos
+El     banano cuesta      24.00 centavos
+
+# usando un diccionario de datos
+diccitem = {"item":"banano","costo":24}
+print("El %(item)s cuesta %(costo)7.1f centavos"%diccitem)
+RESUELTO:
+El banano cuesta    24.0 centavos
+
+
+
+
