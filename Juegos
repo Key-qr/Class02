@@ -1,0 +1,42 @@
+def juego_ahorcado():
+    palabras = ["programacion", "python", "computadora", "algoritmo", "tecnologia"]
+    palabra = random.choice(palabras)
+    palabra_oculta = ["_"] * len(palabra)
+    intentos = 6
+    letras_usadas = []
+
+    print("¡Bienvenido al juego del ahorcado!")
+    print(" ".join(palabra_oculta))
+
+    while intentos > 0 and "_" in palabra_oculta:
+        letra = input("Adivina una letra: ").lower()
+
+        if len(letra) != 1 or not letra.isalpha():
+            print("Por favor, ingresa solo una letra.")
+            continue
+
+        if letra in letras_usadas:
+            print("Ya usaste esa letra. Intenta con otra.")
+            continue
+
+        letras_usadas.append(letra)
+
+        if letra in palabra:
+            print("¡Bien hecho! La letra está en la palabra.")
+            for i, l in enumerate(palabra):
+                if l == letra:
+                    palabra_oculta[i] = letra
+        else:
+            intentos -= 1
+            print(f"Incorrecto. Te quedan {intentos} intentos.")
+
+        print(" ".join(palabra_oculta))
+        print(f"Letras usadas: {', '.join(letras_usadas)}")
+
+    if "_" not in palabra_oculta:
+        print(f"¡Felicidades! Adivinaste la palabra: {palabra}")
+    else:
+        print(f"Perdiste. La palabra era: {palabra}")
+
+# Ejecutar el juego
+juego_ahorcado()
