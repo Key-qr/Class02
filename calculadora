@@ -1,0 +1,22 @@
+def calculadora():
+    print("Calculadora Básica")
+    print("Operaciones: suma (+), resta (-), multiplicación (*), división (/)")
+    a = float(input("Ingrese el primer número: "))
+    b = float(input("Ingrese el segundo número: "))
+    operacion = input("Ingrese la operación (+, -, *, /): ")
+
+    if operacion == "+":
+        print(f"Resultado: {a + b}")
+    elif operacion == "-":
+        print(f"Resultado: {a - b}")
+    elif operacion == "*":
+        print(f"Resultado: {a * b}")
+    elif operacion == "/":
+        if b != 0:
+            print(f"Resultado: {a / b}")
+        else:
+            print("Error: División por cero.")
+    else:
+        print("Operación no válida.")
+
+calculadora()
