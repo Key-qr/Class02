@@ -1,0 +1,15 @@
+import json
+
+# Datos que deseas almacenar
+datos = {
+    "nombre": "Keysi",
+    "edad": 17,
+    "ciudad": "Trujillo",
+    "meta": "Ser programadora"
+}
+
+# Guardar los datos en un archivo JSON
+with open("datos.json", "w") as archivo:
+    json.dump(datos, archivo, indent=4)
+
+print("¡Datos guardados exitosamente!")
