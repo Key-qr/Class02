@@ -1,0 +1,16 @@
+%{
+#include "y.tab.h"
+%}
+
+%%
+
+[0-9]+  { yylval = atoi(yytext); return NUM; }
+\+      { return PLUS; }
+\*      { return TIMES; }
+     { return LPAREN; }
+      { return RPAREN; }
+\n      { return 0; }
+[ \t]   { /* Ignorar espacios y tabulaciones */ }
+.       { printf("Carácter no reconocido: %s\n", yytext); }
+
+%%
